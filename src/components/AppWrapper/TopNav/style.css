@@ -1,0 +1,16 @@
+.header-nav {
+    text-transform: uppercase;
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.header-nav:hover {
+    color: white;
+}

@@ -1,0 +1,8 @@
+.mantine-TextInput-input {
+    width: 275px;
+}
+
+.mantine-TextInput-input:focus {
+    transition: all .2s ease-in-out;
+    width: 600px;
+}
