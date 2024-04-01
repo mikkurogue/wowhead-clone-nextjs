@@ -1,12 +1,13 @@
 import React, { ReactNode } from "react";
-import { AppShell, Burger, Divider, Group, Indicator, TextInput, rem } from "@mantine/core";
+import { AppShell, Burger, Container, Divider, Group, Indicator, TextInput, rem } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import { IconSearch } from "@tabler/icons-react";
 import "./style.css";
 import TopNav from "./TopNav/TopNav";
-import { CLASSES } from "./defaults";
+import { BLUEPOST_LINKS, CLASSES } from "./defaults";
+import BluePostTracker from "../BluePostTracker/BluePostTracker";
 
 type AppWrapperProps = {
   children: ReactNode;
@@ -72,7 +73,12 @@ const AppWrapper = ({ children }: AppWrapperProps) => {
         ))}
         <Divider my={"md"} />
       </AppShell.Navbar>
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main>
+        <Container>
+          <BluePostTracker bluePostLinks={BLUEPOST_LINKS} />
+          {children}
+        </Container>
+      </AppShell.Main>
     </AppShell>
   );
 };

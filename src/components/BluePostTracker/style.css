@@ -1,0 +1,18 @@
+.blue-post-container {
+    background: #181818;
+    border: 1px solid #4b4b4b;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.bluepost-color {
+    color: #00c0ff;
+    cursor: pointer;
+}
+
+.bluepost-color:hover {
+    color: #ccedf8;
+}

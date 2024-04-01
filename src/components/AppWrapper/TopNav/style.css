@@ -14,3 +14,7 @@
 .header-nav:hover {
     color: white;
 }
+
+.inline-span {
+    display: inline;
+}

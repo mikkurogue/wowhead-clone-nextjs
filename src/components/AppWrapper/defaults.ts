@@ -130,3 +130,26 @@ export const CLASSES = [
     ],
   },
 ];
+
+export const BLUEPOST_LINKS = [
+  {
+    href: "#",
+    title: "Some blue post title",
+  },
+  {
+    href: "#",
+    title: "Rogue buffs",
+  },
+  {
+    href: "#",
+    title: "Removing PI from wow",
+  },
+  {
+    href: "#",
+    title: "Giving mikku forever sylvanas daggers",
+  },
+  {
+    href: "#",
+    title: "Bellular is banned from internet",
+  },
+];

@@ -11,7 +11,7 @@ type ClientLayoutProps = {
 const ClientLayout = ({ children }: ClientLayoutProps) => {
   return (
     <MantineProvider>
-      <AppWrapper>{children}</AppWrapper>{" "}
+      <AppWrapper>{children}</AppWrapper>
     </MantineProvider>
   );
 };

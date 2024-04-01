@@ -1,5 +1,5 @@
-import { Container } from "@mantine/core";
+import { Text } from "@mantine/core";
 
 export default function Home() {
-  return <Container>Hello world</Container>;
+  return <Text>Hello World</Text>;
 }
