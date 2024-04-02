@@ -3,6 +3,7 @@
 import { MantineProvider } from "@mantine/core";
 import React, { ReactNode } from "react";
 import AppWrapper from "../AppWrapper/AppWrapper";
+import Footer from "../Footer/Footer";
 
 type ClientLayoutProps = {
   children: ReactNode;
@@ -12,6 +13,7 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
   return (
     <MantineProvider>
       <AppWrapper>{children}</AppWrapper>
+      <Footer />
     </MantineProvider>
   );
 };
