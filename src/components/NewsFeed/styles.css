@@ -1,0 +1,19 @@
+.news-feed-item {
+    background: #181818;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.news-feed-item:hover {
+    border: 1px solid #f7f7f72f;
+}
+
+.image {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.title:hover {
+    color: #fff;
+}
