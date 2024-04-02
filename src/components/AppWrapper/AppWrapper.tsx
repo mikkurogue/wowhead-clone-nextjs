@@ -3,11 +3,25 @@ import { AppShell, Burger, Container, Divider, Group, Indicator, TextInput, rem 
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
-import { IconSearch } from "@tabler/icons-react";
+import {
+  IconBell,
+  IconBellFilled,
+  IconLogin,
+  IconLogin2,
+  IconLogout,
+  IconNotification,
+  IconNotificationOff,
+  IconSearch,
+  IconSettings,
+  IconSettingsFilled,
+  IconUserBolt,
+  IconUserFilled,
+} from "@tabler/icons-react";
 import "./style.css";
 import TopNav from "./TopNav/TopNav";
 import { BLUEPOST_LINKS, CLASSES } from "./defaults";
 import BluePostTracker from "../BluePostTracker/BluePostTracker";
+import { Divide } from "tabler-icons-react";
 
 type AppWrapperProps = {
   children: ReactNode;
@@ -16,6 +30,9 @@ type AppWrapperProps = {
 const AppWrapper = ({ children }: AppWrapperProps) => {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure();
+
+  // emulate a session for later when we figure out login flow * lets look for blizzard SSO
+  const session = true;
 
   return (
     <AppShell
@@ -63,6 +80,11 @@ const AppWrapper = ({ children }: AppWrapperProps) => {
         </div>
       </AppShell.Header>
       <AppShell.Navbar p="md">
+        {session && <AuthenticatedUserLinks />}
+        {!session && <NavbarLinks href={"#"} label="Sign in" icon={<IconLogin2 size={16} />} />}
+
+        <Divider my={"md"} />
+
         {[
           { href: "#", label: "WoW", img: "/images/wow-logo.svg" },
           { href: "#", label: "Classic", img: "/images/wow-classic-logo.svg" },
@@ -80,6 +102,37 @@ const AppWrapper = ({ children }: AppWrapperProps) => {
         </Container>
       </AppShell.Main>
     </AppShell>
+  );
+};
+
+const AuthenticatedUserLinks = () => {
+  return (
+    <>
+      {[
+        {
+          href: "#",
+          label: "Mikkurogue (1337)",
+          icon: <IconUserFilled size={16} />,
+        },
+        {
+          href: "#",
+          label: "Notifications",
+          icon: <IconBellFilled size={16} />,
+        },
+        {
+          href: "#",
+          label: "Settings",
+          icon: <IconSettingsFilled size={16} />,
+        },
+        {
+          href: "#",
+          label: "Logout",
+          icon: <IconLogout size={16} />,
+        },
+      ].map((_, index) => (
+        <NavbarLinks href={_.href} label={_.label} icon={_.icon} key={index} />
+      ))}
+    </>
   );
 };
 
