@@ -1,19 +1,8 @@
 import { Group, Menu, SimpleGrid, Text } from "@mantine/core";
 import React from "react";
 import "./style.css";
+import { CardItem } from "../defaults";
 
-type MenuItems = {
-  href: string;
-  label: string;
-  color: string;
-  specs: { href: string; label: string; img: string }[];
-};
-
-type CardItem = {
-  name: string;
-  image: string;
-  menuItems?: MenuItems[];
-};
 type TopNavProps = {
   card: CardItem[];
 };
@@ -35,8 +24,8 @@ const TopNav = ({ card }: TopNavProps) => {
                       return (
                         <div>
                           <Menu.Label c={menuItem.color}>{menuItem.label}</Menu.Label>
-                          {menuItem.specs.map((spec) => (
-                            <Menu.Item leftSection={<img src={spec.img} />}>{spec.label}</Menu.Item>
+                          {menuItem.subMenu?.map((subMenuItem) => (
+                            <Menu.Item leftSection={<img src={subMenuItem.img} />}>{subMenuItem.label}</Menu.Item>
                           ))}
                         </div>
                       );

@@ -19,7 +19,7 @@ import {
 } from "@tabler/icons-react";
 import "./style.css";
 import TopNav from "./TopNav/TopNav";
-import { BLUEPOST_LINKS, CLASSES } from "./defaults";
+import { BLUEPOST_LINKS, CLASSES, RAIDS } from "./defaults";
 import BluePostTracker from "../BluePostTracker/BluePostTracker";
 import { Divide } from "tabler-icons-react";
 
@@ -65,6 +65,7 @@ const AppWrapper = ({ children }: AppWrapperProps) => {
                 {
                   image: "/images/wow-logo.svg",
                   name: "Raid",
+                  menuItems: RAIDS,
                 },
                 {
                   image: "/images/wow-logo.svg",
