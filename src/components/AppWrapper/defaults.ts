@@ -108,7 +108,7 @@ export const CLASSES: MenuItems[] = [
     color: "#FFF468",
     href: "#",
     subMenu: [
-      { label: "Assassination", href: "#", img: "https://wow.zamimg.com/images/wow/icons/tiny/ability_rogue_deadlybrew.gif" },
+      { label: "Assassination", href: "/class/rogue/assassination", img: "https://wow.zamimg.com/images/wow/icons/tiny/ability_rogue_deadlybrew.gif" },
       { label: "Outlaw", href: "#", img: "https://wow.zamimg.com/images/wow/icons/tiny/ability_rogue_waylay.gif" },
       { label: "Subtlety", href: "#", img: "https://wow.zamimg.com/images/wow/icons/tiny/ability_stealth.gif" },
     ],

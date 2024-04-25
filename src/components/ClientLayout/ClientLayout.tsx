@@ -11,7 +11,7 @@ type ClientLayoutProps = {
 
 const ClientLayout = ({ children }: ClientLayoutProps) => {
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="dark">
       <AppWrapper>{children}</AppWrapper>
       <Footer />
     </MantineProvider>
